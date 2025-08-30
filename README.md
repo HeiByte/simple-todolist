@@ -25,19 +25,17 @@ Tasks are stored in a `data.json` file, making it a lightweight project for lear
 ## ⚙️ Getting Started
 
 ### 1. Clone the repository
-```bash
+bash
 git clone https://github.com/username/simple-todolist.git
 cd simple-todolist
 
-`### 2. Install dependencies`
-bash
-Salin kode
+### 2. Install dependencies`
 npm install
 
-**### 3. Run the server**
-bash
-Salin kode
+### 3. Run the server
 node server.js
+
+
 Server will run at http://localhost:3000.
 
 📂 Project Structure

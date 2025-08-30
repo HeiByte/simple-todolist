@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do-List</title>
+</head>
+<style>
+/* Tema Dark Cyborg */
+body {
+    background-color: #0d0d0d;
+    color: #c0c0c0;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 20px;
+}
+
+/* List utama */
+#list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+#list li {
+    padding: 12px 16px;
+    border: 1px solid #1a1a1a;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+    border-radius: 6px;
+    background: #111;
+    color: #0ff; /* neon cyan */
+    text-shadow: 0 0 4px #0ff;
+}
+
+#list li:hover {
+    background: #0f1115;
+    box-shadow: 0 0 8px #0ff;
+}
+
+/* Section daftar task */
+.daftar-list, .text-input {
+    display: none;
+    margin-top: 15px;
+}
+
+.daftar-list.show, .text-input.show {
+    display: block;
+}
+
+/* Daftar item */
+.list-items li {
+    padding: 10px 12px;
+    border-bottom: 1px solid #222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111;
+    border-radius: 5px;
+    margin-bottom: 6px;
+    transition: 0.2s;
+}
+
+.list-items li:hover {
+    background: #1a1a1a;
+    box-shadow: 0 0 6px #0ff;
+}
+
+/* Tombol */
+.list-items li .btn {
+    margin-left: 5px;
+    cursor: pointer;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    transition: 0.2s;
+    text-shadow: 0 0 2px #000;
+}
+
+.list-items li .btn-edit {
+    background-color: #0ff; 
+    color: #000;
+    box-shadow: 0 0 6px #0ff;
+}
+
+.list-items li .btn-edit:hover {
+    background-color: #0aa;
+    box-shadow: 0 0 10px #0ff;
+}
+
+.list-items li .btn-del {
+    background-color: #f03;
+    box-shadow: 0 0 6px #f03;
+}
+
+.list-items li .btn-del:hover {
+    background-color: #c00;
+    box-shadow: 0 0 10px #f03;
+}
+
+/* Input tambah task */
+.text-input {
+    display: flex;
+    gap: 10px;
+}
+
+.text-input input {
+    flex-grow: 1;
+    padding: 8px 10px;
+    border-radius: 5px;
+    border: 1px solid #222;
+    background-color: #111;
+    color: #0ff;
+    font-family: 'Courier New', monospace;
+    box-shadow: inset 0 0 4px #0ff33a44;
+}
+
+.text-input button {
+    padding: 8px 14px;
+    border-radius: 5px;
+    border: none;
+    background-color: #0ff;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 6px #0ff;
+    transition: 0.2s;
+}
+
+.text-input button:hover {
+    background-color: #0aa;
+    box-shadow: 0 0 12px #0ff;
+}
+</style>
+
+
+<body>
+   <ul id="list">
+    <li>Daftar Task</li>
+    <li>Tambah Task</li>
+</ul>
+
+<div class="daftar-list">
+    <ul class="list-items"></ul>
+</div>
+
+<form class="text-input">
+    <input type="text" id="text" placeholder="Masukkan task baru" required>
+    <button type="submit">Tambah</button>
+</form>
+
+</body>
+<script src="script.js"></script>
+</html>

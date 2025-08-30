@@ -34,7 +34,7 @@ bash
 Salin kode
 npm install
 
-`### 3. Run the server`
+**### 3. Run the server**
 bash
 Salin kode
 node server.js

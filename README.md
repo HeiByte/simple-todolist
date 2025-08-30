@@ -28,11 +28,13 @@ Tasks are stored in a `data.json` file, making it a lightweight project for lear
 ```bash
 git clone https://github.com/username/simple-todolist.git
 cd simple-todolist
-2. Install dependencies
+
+### 2. Install dependencies
 bash
 Salin kode
 npm install
-3. Run the server
+
+### 3. Run the server
 bash
 Salin kode
 node server.js
